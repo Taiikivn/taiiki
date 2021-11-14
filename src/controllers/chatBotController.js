@@ -137,7 +137,7 @@ function handleMessage(sender_psid, message) {
 
     if(entityChosen === ""){
         //default
-        callSendAPI(sender_psid,message);
+        callSendAPI(sender_psid,`{message}`);
     }else{
        if(entityChosen === "wit$greetings"){
            //send greetings message
