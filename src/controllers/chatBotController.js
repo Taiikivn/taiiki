@@ -168,8 +168,8 @@ function handleMessage(sender_psid, message) {
 
     if( message && message.attachments && message.attachments[0].payload){
         callSendAPI(sender_psid, "Thank you for watching my video !!!");
-        callSendAPIWithTemplate(sender_psid);
-        callSendAPI(sender_psid,"Provjp chưa");
+        // callSendAPIWithTemplate(sender_psid);
+        callSendAPI(sender_psid,"Provjp chưa")
         return;
     }
 
