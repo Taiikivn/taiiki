@@ -162,7 +162,7 @@ function firstTrait(nlp, name) {
     return nlp && nlp.entities && nlp.traits[name] && nlp.traits[name][0];
 }
 
-function handleMessage(sender_psid, message,received_message) {
+function handleMessage(sender_psid, message) {
     //handle message for react, like press like button
     // id like button: sticker_id 369239263222822
 
@@ -182,9 +182,9 @@ function handleMessage(sender_psid, message,received_message) {
         }
     });
 
-    if(received_message.text){
+    if(entityChosen === ""){
         //default
-        callSendAPI(sender_psid,`"${received_message.text}""`);
+        callSendAPI(sender_psid,`The bot is needed more training, try to say "thanks a lot" or "hi" to the bot` );
     }else{
        if(entityChosen === "wit$greetings"){
            //send greetings message
