@@ -120,7 +120,7 @@ function handleMessage(sender_psid, message) {
     // id like button: sticker_id 369239263222822
 
     if( message && message.attachments && message.attachments[0].payload){
-        callSendAPI(sender_psid, message);
+        // callSendAPI(sender_psid, message);
         // callSendAPIWithTemplate(sender_psid);
         callSendAPI(sender_psid,"Provjp chưa")
         return;
@@ -137,7 +137,7 @@ function handleMessage(sender_psid, message) {
 
     if(entityChosen === ""){
         //default
-        callSendAPI(sender_psid,`The bot is needed more training, try to say "thanks a lot" or "hi" to the bot` );
+        callSendAPI(sender_psid,message);
     }else{
        if(entityChosen === "wit$greetings"){
            //send greetings message
